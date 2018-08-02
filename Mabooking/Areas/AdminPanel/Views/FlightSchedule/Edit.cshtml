@@ -9,9 +9,13 @@
         <tr>
             <td> Flight Number</td>
 
-            <td><input type="text" name="id" value="@Model.id" /></td>
-
-
+            <td>@*<input type="text" name="id" value="@Model.Routs_Id" />*@
+            @*@Html.DropDownList("Routs_Id")*@
+            @*@Html.DropDownListFor(Model=>Model.Routs_Id, ViewBag.Routs_Id, "tre",new { id = Model.Routs_Id })*@
+             
+            
+           
+            </td>
         </tr>
         <tr>
             <td>Date</td>
@@ -39,8 +43,8 @@
         </tr>
         <tr hidden>
             <td >Rout_ID</td>
-            <td>@*<input type="text"  name="Routs_Id" value="@Model.Routs_Id" />*@
-            @Html.DropDownList("Routs_Id");
+            <td><input type="text"  name="Routs_Id" value="@Model.Routs_Id" />
+            @*@Html.DropDownList("Routs_Id");*@
             </td>
         </tr>
         <tr hidden>

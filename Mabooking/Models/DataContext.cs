@@ -14,6 +14,8 @@ namespace Mabooking.Models
 
         public DbSet<Routs> RoutsCollection { get; set; }
 
+        public DbSet<Reserv> ReservCollection { get; set; }
+
         public DataContext():base("MyConnectionString")
         {
 

@@ -171,9 +171,15 @@
     <Compile Include="Migrations\201807270739003_nn.Designer.cs">
       <DependentUpon>201807270739003_nn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808022015203_Mabookingmigrate.cs" />
+    <Compile Include="Migrations\201808022015203_Mabookingmigrate.Designer.cs">
+      <DependentUpon>201808022015203_Mabookingmigrate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\Entities\Customer.cs" />
     <Compile Include="Models\Entities\FlightsSchedule.cs" />
+    <Compile Include="Models\Entities\Reserv.cs" />
     <Compile Include="Models\Entities\Routs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807270739003_nn.resx">
       <DependentUpon>201807270739003_nn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808022015203_Mabookingmigrate.resx">
+      <DependentUpon>201808022015203_Mabookingmigrate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

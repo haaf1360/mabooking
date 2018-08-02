@@ -22,7 +22,7 @@ namespace Mabooking.Models.Entities
 
 
         //ارتباط با flight schedule 
-        //Navigate property
+        //Navigate property  مجموعه ای از مسیرها ارتباط دارند یزاس راحتی
         public virtual ICollection<FlightsSchedule> ScheduleCollection { get; set; }
         public object SchemeMasters { get; internal set; }
 

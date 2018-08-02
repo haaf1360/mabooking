@@ -46,13 +46,13 @@ namespace Mabooking.Areas.AdminPanel.Controllers
         {
             
             FlightsSchedule FlightsSchedule = Context.ScheduleCollection.Find(Id);
-            ViewBag.Routs_Id = new SelectList(Context.RoutsCollection, "Id", "Id",FlightsSchedule.Routs_Id);
+            ViewBag.Routs_Id = new SelectList(Context.RoutsCollection, "Id", "FlightNumber", FlightsSchedule.Routs_Id);
             return View(FlightsSchedule);
         }
         [HttpPost]
         public ActionResult Edit(FlightsSchedule FlightsSchedule)
         {
-            ViewBag.Routs_Id = new SelectList(Context.RoutsCollection, "Id", "Id", FlightsSchedule.Routs_Id);
+            ViewBag.Routs_Id = new SelectList(Context.RoutsCollection, "Id", "FlightNumber", FlightsSchedule.Routs_Id);
 
             Context.Entry(FlightsSchedule).State = System.Data.Entity.EntityState.Modified;
             Context.SaveChanges();

@@ -1,0 +1,34 @@
+﻿@model Mabooking.Models.Entities.Routs
+@{
+    Layout = "~/Areas/AdminPanel/Views/Shared/_MyLayout.cshtml";
+}
+
+<div class="Holder">
+    <form action="~/AdminPanel/Routs/Create" method="post">
+        <table>
+            <tr>
+                <td>شماره پرواز</td>
+                <td><input type="text" name="FlightNumber" /></td>
+            </tr>
+            <tr>
+                <td>مبدا</td>
+                <td><input type="text" name="Origin"></input>  </td>
+            </tr>
+            <tr>
+                <td>مقصد</td>
+                <td><input type="text" name="Destination"></input>  </td>
+            </tr>
+            @*<tr>
+                    <td>حذف شده</td>
+                    <td><textarea name="Delete"></textarea>  </td>
+                </tr>*@
+            <tr>
+                <td></td>
+                <td><input type="submit" value="ثبت" /></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+</div>

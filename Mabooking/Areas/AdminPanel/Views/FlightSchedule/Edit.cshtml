@@ -1,0 +1,55 @@
+﻿@model Mabooking.Models.Entities.FlightsSchedule
+
+@{
+    Layout = "~/Areas/AdminPanel/Views/Shared/_MyLayout.cshtml";
+}
+
+<form action="/AdminPanel/FlightSchedule/Edit" method="post">
+    <table>
+        <tr>
+            <td> Flight Number</td>
+
+            <td><input type="text" name="id" value="@Model.id" /></td>
+
+
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td><input type="text" name="FltDate" value="@Model.FltDate" /></td>
+        </tr>
+        <tr>
+            <td>Reg</td>
+            <td><input style="text-transform:uppercase" type="text" name="FltReg" value="@Model.FltReg" /></td>
+        </tr>
+        <tr>
+            <td>CAPV</td>
+            <td><input type="text" name="FltCapVol" value="@Model.FltCapVol" /></td>
+        </tr>
+        <tr>
+            <td>CAPW</td>
+            <td><input type="text" name="FltCapWeight" value="@Model.FltCapWeight" /></td>
+        </tr>
+        <tr>
+            <td>Act</td>
+            <td><input type="text" name="Active" value="@Model.Active" /></td>
+        </tr>
+        <tr>
+            <td>RecTime</td>
+            <td><input type="text" name="CreateDate" value="@Model.CreateDate" /></td>
+        </tr>
+        <tr hidden>
+            <td >Rout_ID</td>
+            <td>@*<input type="text"  name="Routs_Id" value="@Model.Routs_Id" />*@
+            @Html.DropDownList("Routs_Id");
+            </td>
+        </tr>
+        <tr hidden>
+            <td >Rout</td>
+            <td><input type="text"  name="Routs_Id" value="@Model.Routs" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,80 @@
+﻿body {
+    direction: rtl;
+    font-family: Tahoma;
+    background-color: gray;
+    margin:0px;
+}
+    .Holder
+        {
+        
+        height:840px;
+        width:1024px;
+        
+        background-color:white;
+        margin-left:auto;
+        margin-right:auto;
+        overflow:auto;
+        color:brown;
+        font-family:Tahoma;
+       
+        
+        }
+
+
+    .Holder table{
+
+        border-spacing:0px;
+
+    }
+
+        .Holder table  th {
+            vertical-align: central;
+            height:50px;
+            padding: 0px;
+            border-spacing: 0px;
+            border: 1px solid black;
+            width:100px;
+            color:blueviolet;
+            background-color:darkblue;
+            color:aliceblue;
+                    
+        }
+        .Holder table td {
+          
+            border: 1px solid black;
+            text-align: center;
+            color: black;
+        }
+        tr:nth-child(even){background-color: lightblue}
+        .Holder a.one{
+            color:red;
+            font-size:larger;
+            font-family:Tahoma;
+           
+                    }
+     
+
+
+            .Menu {
+                height: 50px;
+                background-color: darkgreen;
+                color: white;
+                width: 100%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: left;
+                margin:auto;
+                
+
+            }
+    .Menu a{
+        color:white;
+        text-decoration:none;
+        text-align:center;
+             
+
+    }
+        .Menu a:hover {
+            color: yellow;
+        }
+

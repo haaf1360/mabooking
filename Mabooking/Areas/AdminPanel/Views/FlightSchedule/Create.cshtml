@@ -1,0 +1,56 @@
+﻿@model Mabooking.Models.Entities.FlightsSchedule
+
+@{
+    Layout = "~/Areas/AdminPanel/Views/Shared/_MyLayout.cshtml";
+}
+
+<form action="/AdminPanel/FlightSchedule/Create" method="post">
+    <table>
+        <tr>
+            <td> Flight Number</td>
+            <td>
+                <select name="Routs_Id">
+                    @foreach (var item in ViewBag.FlightNumber)
+                    {
+                        <option value="@item.Id"> @item.FlightNumber</option>
+                    }
+
+
+                </select>
+            </td>
+
+
+            @*<td><input type="text" name="Routs_Id" value="" /></td>*@
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td><input type="text" name="FltDate" value="" /></td>
+        </tr>
+        <tr>
+            <td>Reg</td>
+            <td><input style="text-transform:uppercase" type="text" name="FltReg" value="" /></td>
+        </tr>
+        <tr>
+            <td>CAPV</td>
+            <td><input type="text" name="FltCapVol" value="" /></td>
+        </tr>
+        <tr>
+            <td>CAPW</td>
+            <td><input type="text" name="FltCapWeight" value="" /></td>
+        </tr>
+        <tr>
+            <td>Act</td>
+            <td><input type="text" name="Active" value="" /></td>
+        </tr>
+        <tr>
+            <td>RecTime</td>
+            <td><input type="text" name="CreateDate" value="" /></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+</form>
+ 

@@ -1,0 +1,32 @@
+﻿@model Mabooking.Models.Entities.Routs
+
+@{
+    Layout = "~/Areas/AdminPanel/Views/Shared/_MyLayout.cshtml";
+}
+
+<form action="~/AdminPanel/Routs/Edit" method="post">
+    <td>شماره سریال</td>
+    <input type="text" name="Id" value="@Model.Id" />
+    <table>
+        <tr>
+            <td>شماره پرواز</td>
+            <td><input type="text" name="FlightNumber" value="@Model.FlightNumber" /></td>
+        </tr>
+        <tr>
+            <td>از</td>
+            <td><input type="text" name="Origin" value="@Model.Origin" /></td>
+        </tr>
+        <tr>
+            <td>به</td>
+            <td><input type="text" name="Destination" value="@Model.Destination" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="ثبت" /></td>
+            <td><a href="~/AdminPanel/Routs/index" />برگشت</td>
+        </tr>
+    </table>
+</form>
+
+
+

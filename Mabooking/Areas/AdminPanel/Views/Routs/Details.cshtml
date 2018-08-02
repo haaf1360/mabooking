@@ -1,0 +1,58 @@
+﻿@model Mabooking.Models.Entities.Routs
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Routs</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FlightNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FlightNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Origin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Origin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Destination)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Destination)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Delete)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Delete)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

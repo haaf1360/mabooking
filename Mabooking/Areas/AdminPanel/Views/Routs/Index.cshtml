@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<Mabooking.Models.Entities.Routs>
+
+@{
+    Layout = "~/Areas/AdminPanel/Views/Shared/_MyLayout.cshtml";
+}
+
+<a href="/AdminPanel/Routs/Create">Add new</a>
+
+<table>
+    <tr>
+
+        <th hidden>ID</th>
+
+        <th>Flight Number     </th>
+
+        <th>ORG</th>
+        <th>--></th>
+        <th>DES</th>
+        <th> </th>
+        <th> </th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+
+
+
+        <tr>
+
+            <td hidden>@item.Id</td>
+
+            <td>@item.FlightNumber     </td>
+
+            <td>@item.Origin</td>
+            <td>--></td>
+            <td>@item.Destination</td>
+            <td><a href="/AdminPanel/Routs/Edit/@item.Id">Edit</a> </td>
+            <td><a href="/AdminPanel/Routs/Delete/@item.Id"> Delete </a>  </td>
+
+        </tr>
+
+    }
+</table>
+<a href="/AdminPanel/Routs/Create">Add new</a>

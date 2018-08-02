@@ -20,6 +20,8 @@ namespace Mabooking.Models
         {
 
         }
+
+        public System.Data.Entity.DbSet<Mabooking.Models.Entities.Customer> Customers { get; set; }
     }
 
 }

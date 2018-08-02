@@ -138,6 +138,16 @@
     <Content Include="Areas\AdminPanel\Views\Routs\Details.cshtml" />
     <Content Include="Areas\AdminPanel\Views\FlightSchedule\Create.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\_MyLayout.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Customers\Create.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Customers\Delete.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Customers\Details.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Customers\Edit.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Customers\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Reservs\Create.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Reservs\Delete.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Reservs\Details.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Reservs\Edit.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Reservs\Index.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -158,7 +168,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\CustomersController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\FlightScheduleController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\ReservsController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\RoutsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

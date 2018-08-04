@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+<input type="hidden" name="id" value="@Model.id" />
     <div class="form-horizontal">
         <h4>Reserv</h4>
         <hr />

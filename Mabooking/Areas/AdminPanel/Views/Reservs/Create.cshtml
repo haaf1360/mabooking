@@ -5,15 +5,17 @@
     Layout = "~/Areas/AdminPanel/Views/Shared/_MyLayout.cshtml";
 }
 
-<h2>Create</h2>
+<h2 style="text-align:center">Reservation Form</h2>
 
 @using (Html.BeginForm()) 
 {
+
+
+
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Reserv</h4>
-        <hr />
+
+    <div class="form-horizontal" style="direction:ltr;padding:50px">
+       
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Customer_Id, "Customer", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -105,6 +107,6 @@
     </div>
 }
 
-<div>
+<div style="text-align:left">
     @Html.ActionLink("Back to List", "Index")
 </div>

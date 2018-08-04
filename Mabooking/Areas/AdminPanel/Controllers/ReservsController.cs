@@ -77,7 +77,8 @@ namespace Mabooking.Areas.AdminPanel.Controllers
                 return HttpNotFound();
             }
             ViewBag.Customer_Id = new SelectList(db.Customers, "Id", "Name", reserv.Customer_Id);
-            ViewBag.FlightsSchedule_Id = new SelectList(db.RoutsCollection, "id", "FlightNumber", reserv.FlightsSchedule_Id);
+
+            ViewBag.FlightsSchedule_Id = new SelectList(db.RoutsCollection.Join(db.ScheduleCollection, it => it.Id, it2 => it2.Routs_Id, (it1, it2) => new { Title = it1.FlightNumber+" "+it2.FltDate, Id = it2.id }), "Id", "Title", reserv.FlightsSchedule_Id);
             return View(reserv);
         }
 
@@ -95,7 +96,8 @@ namespace Mabooking.Areas.AdminPanel.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.Customer_Id = new SelectList(db.Customers, "Id", "Name", reserv.Customer_Id);
-            ViewBag.FlightsSchedule_Id = new SelectList(db.RoutsCollection, "id", "FlightNumber", reserv.FlightsSchedule_Id);
+
+            ViewBag.FlightsSchedule_Id = new SelectList(db.RoutsCollection.Join(db.ScheduleCollection, it => it.Id, it2 => it2.Routs_Id, (it1, it2) => new { Title = it1.FlightNumber+" "+it2.FltDate, Id = it2.id }), "Id", "Title", reserv.FlightsSchedule_Id);
             return View(reserv);
         }
 

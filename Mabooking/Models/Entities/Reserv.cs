@@ -10,9 +10,9 @@ namespace Mabooking.Models.Entities
     public class Reserv
     {
 
-        public int id { get; set; }
+        public long id { get; set; }
 
-        public int Customer_Id { get; set; }
+        public long Customer_Id { get; set; }
         [ForeignKey("Customer_Id")]
         public virtual Customer Customer { get; set; }
 

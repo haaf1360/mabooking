@@ -41,7 +41,11 @@ namespace Mabooking.Areas.AdminPanel.Controllers
         public ActionResult Create()
         {
             ViewBag.Customer_Id = new SelectList(db.Customers, "Id", "Name");
-            ViewBag.FlightsSchedule_Id = new SelectList(db.RoutsCollection, "id", "FlightNumber");
+            // ViewBag.FlightsSchedule_Id = new SelectList(db.RoutsCollection, "id", "FlightNumber");
+         //   Reserv reserv = db.ReservCollection.Find(id);
+            ViewBag.FlightsSchedule_Id = new SelectList(db.RoutsCollection.Join(db.ScheduleCollection, it => it.Id, it2 => it2.Routs_Id, (it1, it2) => new { Title = it1.FlightNumber + " " + it2.FltDate, Id = it2.id }), "Id", "Title");
+
+            // ViewBag.flightschedule_Date = new SelectList(db.ScheduleCollection, "id", "FltDate");
             return View();
         }
 

@@ -19,6 +19,9 @@
             @Html.DisplayNameFor(model => model.FlightsSchedule.Routs.FlightNumber)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.FlightsSchedule.FltDate)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Weight)
         </th>
         <th>
@@ -54,6 +57,10 @@
             @Html.DisplayFor(modelItem => item.FlightsSchedule.Routs.FlightNumber)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.FlightsSchedule.FltDate.Day)-@Html.DisplayFor(modelItem => item.FlightsSchedule.FltDate.Month)-@Html.DisplayFor(modelItem => item.FlightsSchedule.FltDate.Year)
+
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Weight)
         </td>
         <td>
@@ -78,9 +85,9 @@
             @Html.DisplayFor(modelItem => item.CreateDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
         </td>
     </tr>
 }

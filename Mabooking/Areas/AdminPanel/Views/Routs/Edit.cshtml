@@ -5,11 +5,13 @@
 }
 
 <form action="~/AdminPanel/Routs/Edit" method="post">
-    <td>شماره سریال</td>
+    <div>Serial No</div>
     <input type="text" name="Id" value="@Model.Id" />
+    <div> <br /> </div>
+
     <table>
         <tr>
-            <td>شماره پرواز</td>
+            <td>ّFlight No</td>
             <td><input type="text" name="FlightNumber" value="@Model.FlightNumber" /></td>
         </tr>
         <tr>
@@ -21,9 +23,9 @@
             <td><input type="text" name="Destination" value="@Model.Destination" /></td>
         </tr>
         <tr>
-            <td></td>
+            <td>@Html.ActionLink("Back to List", "Index")</td>
             <td><input type="submit" value="ثبت" /></td>
-            <td><a href="~/AdminPanel/Routs/index" />برگشت</td>
+           
         </tr>
     </table>
 </form>

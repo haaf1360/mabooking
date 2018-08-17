@@ -9,6 +9,12 @@
 
 <div>
     <h4>Reserv</h4>
+    <dh>
+        @Html.DisplayFor(model => model.FlightsSchedule.Routs.FlightNumber)
+  
+        @Html.DisplayFor(model => model.FlightsSchedule.FltDate.Day)-@Html.DisplayFor(model => model.FlightsSchedule.FltDate.Month)-@Html.DisplayFor(model => model.FlightsSchedule.FltDate.Year)
+
+    </dh>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -18,14 +24,17 @@
         <dd>
             @Html.DisplayFor(model => model.Customer.Name)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.FlightsSchedule.FltReg)
+            @Html.DisplayNameFor(model => model.FlightsSchedule)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.FlightsSchedule.FltReg)
+            @Html.DisplayFor(model => model.FlightsSchedule.Routs.FlightNumber)
         </dd>
+        <dd>
+            @Html.DisplayFor(model => model.FlightsSchedule.FltDate.Day)-@Html.DisplayFor(model => model.FlightsSchedule.FltDate.Month)-@Html.DisplayFor(model => model.FlightsSchedule.FltDate.Year)
+
+        </dd>
+
 
         <dt>
             @Html.DisplayNameFor(model => model.Weight)

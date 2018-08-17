@@ -25,7 +25,9 @@
             <td>@item.FltCapVol</td>
             <td>@item.FltCapWeight</td>
             <td>@Mabooking.Areas.AdminPanel.Controllers.ShowRouteNumber.GetNumber(item.Routs_Id)</td>
-            <td>@item.FltDate   </td>
+            <td>
+              @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(item.FltDate.Month)@Html.DisplayFor(modelItem => item.FltDate.Day)
+            </td>
             <td>@item.FltReg</td>
             <td>@item.FltCapWeight</td>
             <td><a href="/AdminPanel/FlightSchedule/Edit/@item.id">Edit</a> </td>

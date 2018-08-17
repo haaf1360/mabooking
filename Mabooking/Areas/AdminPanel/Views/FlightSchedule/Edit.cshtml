@@ -52,10 +52,15 @@
             <td><input type="text"  name="Routs_Id" value="@Model.Routs" /></td>
         </tr>
         <tr>
-            <td></td>
             <td>
-            <input type="hidden" name="Id" id="Id" value="@Model.id"/>
-            <input type="submit" value="Save" /></td>
+                    @Html.ActionLink("Back to List", "Index")
+            </td>
+            <td>
+
+                <input type="hidden" name="Id" id="Id" value="@Model.id" />
+                <input type="submit" value="Save" />
+            
+            </td>
         </tr>
     </table>
 </form>
